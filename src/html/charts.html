@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/index.9fab382d.css">
+    <title>Diagram</title>
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico">
+    <script src="/src/js/index.8b73143e.js" type="module"></script>
+    <script src="/src/js/charts.a854d38d.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>SCSS Meets Car Lover</h1>
+            <div class="ikonMeny">
+                <button class="menu-btn open" id="open-menu">
+                    <span class="menu-icon">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <nav id="nav-menu">
+            <button class="close menu-btn" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+            </button>
+            <ul>
+                <li>
+                    <a href="/src/html/index.html">Startsida</a>
+                </li>
+                <li>
+                    <a href="sass.html">SASS</a>
+                </li>
+                <li>
+                    <a href="animeringar.html">Animering</a>
+                </li>
+                <li>
+                    <a href="charts.html">Diagram</a>
+                </li>
+                <li>
+                    <a href="maps.html">Karta</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="meny">
+            <ul>
+                <li>
+                    <a class="active" href="/src/html/index.html">Startsida</a>
+                </li>
+                <li>
+                    <a href="sass.html">SASS</a>
+                </li>
+                <li>
+                    <a href="animeringar.html">Animering</a>
+                </li>
+                <li>
+                    <a href="charts.html">Diagram</a>
+                </li>
+                <li>
+                    <a href="maps.html">Karta</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h2>Diagram</h2>
+        <h3>De mest sökta kurserna på Mittuniversitetet</h3>
+        <div class="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+        <h3>De mest sökta programmen på Mittuniversitetet</h3>
+        <div class="pieContainer">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </main>
+    <footer>DT211G @2024 - Linus Lundgren </footer>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+$primary-background: rgb(0, 0, 0);
+
+$light-background: lighten($primary-background, 15%);
+
+$dark-background: darken($primary-background, 30%);
+
+$darkest-background: darken($primary-background, 70%);
+
+$complement-background: complement($primary-background);
+
+$darkend-complement: darken($complement-background, 20%);
+
+$light-complement: lighten($complement-background, 18%);
+
+$multicolor: linear-gradient(to right, #a6aaac, rgb(77, 77, 80),rgb(32, 128, 45),rgb(2, 204, 29)) ;
+
+$font-stack: Georgia, 'Times New Roman', Times, serif;
+
+
+//Mixin
+
+@mixin pic-background ($padding, $radius: 0, $margin: 0) {
+    padding: $padding;
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+@mixin text-border ($border, $background-color, $circel) {
+    border: $border solid black;
+    background-color: $background-color;
+
+    @if $circel {
+        border-radius: 50%;
+    }
+}
+
+
+
+
+

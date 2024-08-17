@@ -1,0 +1,316 @@
+@use "base";
+
+body {
+    margin: 0 auto;
+    background-color: base.$primary-background;
+    font-family: base.$font-stack;
+    line-height: 2em;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+h1 {
+    margin-left: 2%;
+    margin-top: 3%;
+    font-size: 2.8em;
+    transform: rotate(5deg);
+    color: black;
+    text-shadow: 0 0 10px base.$darkend-complement, 0 0 20px base.$darkend-complement, 0 0 30px base.$darkend-complement;
+}
+
+h2 {
+    @extend h1;
+    transform: rotate(-5deg);
+    margin-bottom: 6%;
+    margin-top: 4%;
+    font-size: 2.6em;
+    transition: font-size 0.3s ease;
+}
+
+h2:hover {
+font-size: 3.2em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+#rubrik {
+    @extend h1;
+    transform: rotate(0deg);
+}
+
+blockquote {
+    font-size: 1.3em;
+    animation: animationBg 6s infinite alternate;
+    padding: 2%;
+    border-radius: 50%;
+    width: 50%;
+    margin: 3% auto;
+}
+
+p {
+    font-size: 1.3em;
+    max-width: 55ch;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.plus-minus {
+    @include base.text-border (3px, base.$light-complement, false);
+    margin: 5%;
+}
+
+.workprocess {
+    @include base.text-border (3px, base.$light-background, true);
+    margin: 5%;
+    padding: 5%;
+}
+
+//Bilderna startsida
+
+.pictures {
+    @include base.pic-background (3%, $radius: 20px, $margin: 0%);
+    background: base.$multicolor;
+    position: relative;
+    width: 100%;
+}
+
+img {
+    border-radius: 20px;
+}
+
+/*Menyknapp utfälld meny*/
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: base.$complement-background;
+    border: black solid 2px;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:hover {
+        background-color: base.$dark-background;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+    }
+}
+
+.open {
+    margin: 0 1em;
+}
+
+
+.menu-icon {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.bars {
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+}
+
+/*Menyknapp stängd*/
+.close {
+    margin: 1.5em;
+    padding: 10px 15px;
+}
+
+/*Kryss*/
+.cross1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+    background-color: black;
+}
+
+.cross2 {
+    width: 25px;
+    transform: rotate(135deg);
+    position: relative;
+    top: -3px;
+    background-color: black;
+}
+
+.ikonMeny {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+//Footer
+
+footer {
+    background-color: base.$dark-background;
+    padding: 3%;
+    font-size: 1.3em;
+    color: white;
+}
+
+
+// MEDIA QUERIES ------------------ >
+
+//Meny för större skärmar
+
+@media only screen and (min-width: 992px) {
+
+    .meny {
+        display: inline;
+        font-size: 1.2rem;
+
+        ul {
+            margin: 0;
+            padding: 2%;
+            list-style: none;
+        }
+
+        li {
+            display: inline-block !important;
+            padding-right: 1em;
+            cursor: pointer;
+            font-weight: bold;
+
+            a {
+                display: block;
+                padding: 6px 20px;
+                text-decoration: none;
+                font-size: 1.6em;
+                color: base.$darkest-background;
+                font-weight: 700;
+
+                &:hover {
+                    background-color: base.$light-background;
+                    color: black;
+                    border-radius: 20px;
+                    transform: rotate(20deg);
+                }
+
+                &.active {
+                    background-color: base.$light-background;
+                    color: black;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .ikonMeny {
+        display: none;
+    }
+
+    #nav-menu {
+        display: none !important;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    header {
+        position: static;
+    }
+
+    #dog5 {
+        display: none;
+    }
+}
+
+//Text och rubriker mm för mindre skärmare
+
+@media only screen and (max-width: 905px) {
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    p {
+        margin: 5%;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    .plus-minus {
+        margin: 1%;
+        margin-bottom: 5%;
+    }
+
+    .workprocess {
+        margin: 1%;
+        padding: 15%;
+        margin-bottom: 5%;
+    }
+
+    blockquote {
+        font-size: 1.2em;
+        width: 100%;
+        padding: 5%;
+        margin: 0;
+        animation: animationBg 6s 1s infinite alternate;
+        border-radius: 0%;
+    }
+
+    #dog {
+        width: 50%;
+        height: auto;
+    }
+
+    #textFido {
+        font-size: 1.2em;
+    }
+
+    #dog4 {
+        display: none;
+    }
+}
+
+
+//Inställningar för dark-mode
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: base.$darkest-background;
+        color: white;
+    }
+
+    .meny li a {
+        color: white;
+    }
+
+    .plus-minus,
+    .workprocess {
+        color: black;
+    }
+}
+

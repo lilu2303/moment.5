@@ -1,0 +1,47 @@
+@use "base";
+
+.chartContainer {
+    width: 80%;
+    max-width: 900px;
+    margin: 5% auto;
+    aspect-ratio: 2;
+}
+
+.pieContainer {
+    width: 80%;
+    max-width: 600px;
+    margin: 5% auto;
+    aspect-ratio: 1;
+}
+
+// Kartsidan
+
+#locationForm {
+margin-bottom: 1%;
+}
+
+#searchInput {
+    width: 20%;
+    height: 30px;
+    font-size: 1.2em;
+}
+
+#locationForm button {
+    width: 100px; 
+    height: 35px; 
+    font-size: 16px; 
+    background-color: base.$complement-background; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+}
+
+#locationForm button:hover {
+    background-color: base.$darkend-complement;
+}
+
+#map {
+    height: 60vh;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,112 @@
+@use "base";
+
+@keyframes animationBg {
+    0% {
+        background-color: base.$primary-background;
+    }
+
+    50% {
+        background-color: lightblue;
+    }
+
+    100% {
+        background-color: base.$complement-background;
+    }
+}
+
+@keyframes animationMove {
+    0% {
+        transform: translate(0%, 0);
+    }
+
+    50% {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+
+    51% {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1,1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.2, 1.2) rotate(72deg);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5) rotate(144deg);
+    }
+
+    75% {
+        transform: scale (1.2, 1.2) rotate(216deg);
+    }
+
+    100% {
+        transform: scale(1,1) rotate(360deg);
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+      transform: translateX(0) translateY(0); 
+    }
+
+    50% {
+      transform: translateX(0) translateY(-50px) rotate(45deg); 
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-5px); 
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+      transform: translateX(5px); 
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    75% {
+      transform: translateX(-5px); 
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  
+@keyframes zoomOut {
+  0% {
+      transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+      transform: scale(0.8) rotate(-72deg);
+  }
+
+  50% {
+      transform: scale(0.6) rotate(-144deg);
+  }
+
+  75% {
+      transform: scale (0.8) rotate(-216deg);
+  }
+
+  100% {
+      transform: scale(1) rotate(-360deg);
+  }
+}
